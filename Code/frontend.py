@@ -1,5 +1,3 @@
-# run the code from github link: streamlit run link
-
 import streamlit as st
 import pandas as pd
 
@@ -21,4 +19,6 @@ st.write(pd.DataFrame({
     'first column': [number(), 2, 3, 4],
     'second column': [10, 20, 30, 40]
 }))
+
+st.button('Hit me')
 
