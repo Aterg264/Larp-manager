@@ -1,5 +1,11 @@
-Comands to execute streamlid
 
+Comands to execute streamlid
+----------------------------
 run the code from github link: streamlit run link
 python -m streamlit run C:\Users\Greta\Desktop\rol\Chains\Techie\Tasks_Chains\Code\frontend.py
 .venv\Scripts\activate
+
+Documentation
+-------------
+https://blog.streamlit.io/streamlit-firestore/
+
