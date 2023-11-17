@@ -22,3 +22,7 @@ st.write(pd.DataFrame({
 
 st.button('Hit me') 
 
+st.header('Hello 🌎!')
+if st.button('Balloons?'):
+    st.balloons()
+
