@@ -2,6 +2,7 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 import time
+import os
 from google.cloud import firestore
 
 from backend import *
@@ -61,7 +62,8 @@ st.map(map_data)
 # Observe Data
 
 # Authenticate to Firestore with the JSON account key.
-db = firestore.Client.from_service_account_json("keys/firestore-key-app-tasks.json")
+st.write(os.getcwd())
+db = firestore.Client.from_service_account_json("Tasks_Chains/keys/firestore-key-app-tasks.json")
 
 
 
