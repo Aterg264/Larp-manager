@@ -63,7 +63,7 @@ st.map(map_data)
 
 # Authenticate to Firestore with the JSON account key.
 st.write(os.getcwd())
-db = firestore.Client.from_service_account_json("Tasks_Chains/keys/firestore-key-app-tasks.json")
+db = firestore.Client.from_service_account_json("keys/firestore-key-app-tasks.json")
 
 
 
