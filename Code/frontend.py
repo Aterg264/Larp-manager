@@ -1,5 +1,7 @@
 import streamlit as st
 import pandas as pd
+import numpy as np
+import time
 from google.cloud import firestore
 
 from backend import *
@@ -21,11 +23,28 @@ st.write(pd.DataFrame({
     'second column': [10, 20, 30, 40]
 }))
 
-st.button('Hit me') 
+# st.button('Hit me') 
 
 st.header('Hello 🌎!')
 if st.button('Balloons?'):
     st.balloons()
+
+if st.button('Snow?'):
+    st.snow()
+
+if st.button('Three cheers'):
+    st.toast('Hip!')
+    time.sleep(.5)
+    st.toast('Hip!')
+    time.sleep(.5)
+    st.toast('Hooray!', icon='🎉')
+
+# Create a map
+map_data = pd.DataFrame(
+    np.array([[41, 2], [41, -0.9], [37, -4]]),
+    columns=['lat', 'lon'])
+st.write(map_data)
+st.map(map_data)
 
 # PLAYING WITH FIREBASE
 
@@ -44,9 +63,10 @@ doc = doc_ref.get()
 st.write("The id is: ", doc.id)
 st.write("The contents are: ", doc.to_dict())
 
+""""
 # Create New Data
 
-# Create a new post reference for Apple
+# Create a new post reference for Organizacion
 doc_ref = db.collection("character_type").document("Organizacion")
 
 # And then uploading some data to that reference
@@ -54,3 +74,30 @@ doc_ref.set({
   "code": "organizacion",
   "funcion": "organizar"
 })
+
+"""
+
+# 
+
+# Streamlit widgets to let a user create a new post
+title = st.text_input("Post title")
+url = st.text_input("Post url")
+submit = st.button("Submit new post")
+
+# Once the user has submitted, upload it to the database
+if title and url and submit:
+	doc_ref = db.collection("posts").document(title)
+	doc_ref.set({
+		"title": title,
+		"url": url
+	})
+
+# And then render each post, using some light Markdown
+posts_ref = db.collection("posts")
+for doc in posts_ref.stream():
+	post = doc.to_dict()
+	title = post["title"]
+	url = post["url"]
+
+	st.subheader(f"Post: {title}")
+	st.write(f":link: [{url}]({url})")
