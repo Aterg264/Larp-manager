@@ -62,7 +62,7 @@ st.map(map_data)
 # Observe Data
 
 # Authenticate to Firestore with the JSON account key.
-st.write(os.chdir("C:/Users/Greta/Desktop/rol/Chains/Techie/Tasks_Chains"))
+# st.write(os.chdir("C:/Users/Greta/Desktop/rol/Chains/Techie/Tasks_Chains"))
 db = firestore.Client.from_service_account_json("keys/firestore-key-app-tasks.json")
 
 
@@ -89,7 +89,7 @@ doc_ref.set({
   "funcion": "organizar"
 })
 
-"""
+
 
 # 
 
@@ -107,3 +107,4 @@ for doc in type_ref.stream():
 
 	st.subheader(f"Code: {code}")
 	st.write(f":Funcion: [{funcion}]({funcion})")
+"""
