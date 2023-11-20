@@ -62,6 +62,7 @@ st.map(map_data)
 
 # Authenticate to Firestore with the JSON account key.
 db = firestore.Client.from_service_account_json(st.secrets["firebase"])
+st.write(st.secrets["firebase"])
 
 # Create a reference to the Google post.
 doc_ref = db.collection("character_type").document("Broker")
