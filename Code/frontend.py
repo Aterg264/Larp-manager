@@ -39,6 +39,16 @@ if st.button('Three cheers'):
     time.sleep(.5)
     st.toast('Hooray!', icon='🎉')
 
+def cook_breakfast():
+    msg = st.toast('Gathering ingredients...')
+    time.sleep(1)
+    msg.toast('Cooking...')
+    time.sleep(1)
+    msg.toast('Ready!', icon = "🥞")
+
+if st.button('Cook breakfast'):
+    cook_breakfast()
+
 # Create a map
 map_data = pd.DataFrame(
     np.array([[41, 2], [41, -0.9], [37, -4]]),
