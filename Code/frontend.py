@@ -61,7 +61,6 @@ st.map(map_data)
 # Observe Data
 
 # Authenticate to Firestore with the JSON account key.
-st.write(st.secrets["firebase.type"])
 st.write(st.secrets["firebase"])
 db = firestore.Client.from_service_account_json(st.secrets["firebase"])
 
