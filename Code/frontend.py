@@ -2,8 +2,7 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 import time
-import os
-from google.cloud import firestore
+# from google.cloud import firestore
 
 from backend import *
 
