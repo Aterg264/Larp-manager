@@ -10,7 +10,7 @@ from backend import *
 Use dataframe to create a table in two different ways:
 """
 
-st.write("Without st.write")
+st.write("Without st.writ")
 df = pd.DataFrame({
   'first column': [number(), 2, 3, 4],
   'second column': [10, 20, 30, 40]
@@ -56,7 +56,7 @@ map_data = pd.DataFrame(
 st.write(map_data)
 st.map(map_data)
 
-""""
+"""
 # PLAYING WITH FIREBASE
 
 # Observe Data
