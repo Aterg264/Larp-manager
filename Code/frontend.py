@@ -57,6 +57,7 @@ map_data = pd.DataFrame(
 st.write(map_data)
 st.map(map_data)
 
+""""
 # PLAYING WITH FIREBASE
 
 # Observe Data
@@ -77,7 +78,7 @@ doc = doc_ref.get()
 st.write("The id is: ", doc.id)
 st.write("The contents are: ", doc.to_dict())
 
-""""
+
 # Create New Data
 
 # Create a new post reference for Organizacion
