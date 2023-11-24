@@ -1,3 +1,6 @@
 streamlit
 pandas
 numpy
+opencv-python-headless==4.8.1.78
+pydub==0.25.1
+streamlit_webrtc==0.47.1
