@@ -13,3 +13,5 @@ def sketch(img):
     return sketch_img
 
 picture = st.camera_input("First, take a picture...")
+if picture:
+    st.image(sketch(picture), channels="BGR")
