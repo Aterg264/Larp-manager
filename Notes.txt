@@ -21,6 +21,10 @@ Keys with google cloud
 -------------------------
 https://console.cloud.google.com/apis/dashboard?hl=es&project=tasks-b6d48 
 
+Galery examples
+---------------
+https://streamlit.io/components?category=images-video 
+
 Example for kids
 ----------------
 https://docs.streamlit.io/library/get-started/multipage-apps/create-a-multipage-app
