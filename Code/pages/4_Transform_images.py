@@ -1,5 +1,6 @@
 import streamlit as st
-from cv2 import cv2
+import cv2
+import numpy as np
 
 def preprocess(img):
     bytes_data = np.asarray(bytearray(img.read()), dtype=np.uint8)
@@ -13,6 +14,7 @@ def sketch(img):
     )
     return sketch_img
 
-picture = st.camera_input("First, take a picture...")
-if picture:
-    st.image(sketch(picture), channels="BGR")
+# picture = st.camera_input("First, take a picture...")
+uploaded_file = st.file_uploader("Choose an image")
+if uploaded_file:
+    st.image(sketch(uploaded_file), channels="BGR")
