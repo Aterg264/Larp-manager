@@ -5,6 +5,10 @@ run the code from github link: streamlit run link
 .venv\Scripts\activate
 python -m streamlit run Tasks_Chains\Code\frontend.py
 
+Installing Packages
+-------------------
+.\.venv\Scripts\python.exe -m pip install opencv-python
+
 Documentation
 -------------
 https://blog.streamlit.io/streamlit-firestore/

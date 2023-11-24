@@ -1,4 +1,5 @@
 import streamlit as st
+from cv2 import cv2
 
 def preprocess(img):
     bytes_data = np.asarray(bytearray(img.read()), dtype=np.uint8)
