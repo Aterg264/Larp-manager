@@ -7,6 +7,7 @@ import time
 from backend import *
 
 st.sidebar.markdown("# Main page 🎈")
+st.header('Hello 🌎!')
 
 """
 Use dataframe to create a table in two different ways:
@@ -54,10 +55,5 @@ with right_column:
         ("Gryffindor", "Ravenclaw", "Hufflepuff", "Slytherin"))
     st.write(f"You are in {chosen} house!")
 
-# BUTTON
-
-# st.button('Hit me') 
-
-st.header('Hello 🌎!')
 
 

@@ -13,6 +13,11 @@ Login
 ------
 https://blog.streamlit.io/streamlit-authenticator-part-1-adding-an-authentication-component-to-your-app/
 
-Comprobar temas de claves
+Keys with google cloud
 -------------------------
 https://console.cloud.google.com/apis/dashboard?hl=es&project=tasks-b6d48 
+
+Example for kids
+----------------
+https://docs.streamlit.io/library/get-started/multipage-apps/create-a-multipage-app
+
