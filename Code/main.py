@@ -1,5 +1,6 @@
 from backend import *
 import packages.module_test as pk
+import streamlit as st
 
-print(number())
-print(pk.greet("Hydroblin"))
+st.write(number())
+st.write(pk.greet("Hydroblin"))
