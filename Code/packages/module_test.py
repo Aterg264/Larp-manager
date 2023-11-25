@@ -1,6 +1,6 @@
 
 def greet(name):
-    st.write('Hello ', name, '!')
+    st.write(name)
 
 def add(a, b):
     return a + b
