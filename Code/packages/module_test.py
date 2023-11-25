@@ -1,3 +1,4 @@
+import streamlit as st
 
 def greet(name):
     st.write(name)
