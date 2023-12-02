@@ -1,13 +1,17 @@
 # https://www.google.com/search?q=code+to+use+fc+tag+in+an+app&sca_esv=585309262&cs=0&biw=1366&bih=660&sxsrf=AM9HkKnzcsG4sP6kPfxZb4xSXn7558sDTg%3A1700948130334&ei=omhiZf_0E7jtkdUP4J-8uAk&ved=0ahUKEwj_zdvIjeCCAxW4dqQEHeAPD5cQ4dUDCBA&uact=5&oq=code+to+use+fc+tag+in+an+app&gs_lp=Egxnd3Mtd2l6LXNlcnAiHGNvZGUgdG8gdXNlIGZjIHRhZyBpbiBhbiBhcHAyCBAAGIAEGKIEMggQABiABBiiBDIIEAAYgAQYogQyCBAAGIAEGKIEMggQABiABBiiBEj4tQFQ1WpYmLUBcAR4AZABAJgBsQGgAeEWqgEEOC4xObgBA8gBAPgBAcICChAAGEcY1gQYsAPCAg0QABiABBiKBRiwAxhDwgIKECMYgAQYigUYJ8ICBBAjGCfCAgsQABiABBixAxiDAcICCxAuGIAEGLEDGIMBwgIOEC4YgAQYigUYsQMYgwHCAhEQLhiDARjHARixAxjRAxiABMICDhAAGIAEGIoFGLEDGIMBwgIKEAAYgAQYigUYQ8ICBRAuGIAEwgIWEC4YgAQYigUYsQMYgwEYxwEY0QMYQ8ICCBAuGIAEGLEDwgIIEAAYgAQYsQPCAgoQABiABBgUGIcCwgIOEC4YgAQYsQMYxwEY0QPCAgUQABiABMICCxAuGIMBGLEDGIAEwgIHEAAYgAQYCsICDRAAGIAEGLEDGIMBGArCAgsQLhivARjHARiABMICCBAAGIAEGMsBwgIUEC4YgAQYlwUY3AQY3gQY4ATYAQHCAgoQLhgNGLEDGIAEwgIHEC4YDRiABMICDhAuGIAEGMsBGMcBGNEDwgIHEAAYgAQYDcICGRAuGA0YsQMYgAQYlwUY3AQY3gQY4ATYAQHCAgcQLhiABBgNwgIWEC4YDRiABBiXBRjcBBjeBBjgBNgBAcICBhAAGBYYHsICCBAAGBYYHhgPwgIFECEYoAHCAgQQIRgVwgIIECEYFhgeGB3CAgoQIRgWGB4YDxgd4gMEGAAgQYgGAZAGCroGBggBEAEYFA&sclient=gws-wiz-serp#fpstate=ive&vld=cid:6e10aee9,vid:BZRYHNmB9RI,st:0
 
 import nfc
+from nfc.clf import RemoteTarget
 import ndef
 import streamlit as st
 
-if ndef is not None:
-    for record in ndef.records:
-        print(record)
+target = nfc.clf.sense(RemoteTarget('106A'))
+st.write(target)
+
+# if ndef is not None:
+#     for record in ndef.records:
+#         print(record)
 
 
-st.write(ndef is not None)
-st.write(ndef.is_writeable)
+# st.write(ndef is not None)
+# st.write(ndef.is_writeable)
