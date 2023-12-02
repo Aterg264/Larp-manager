@@ -7,7 +7,7 @@ import time
 from backend import *
 
 st.sidebar.markdown("# Main page 🎈")
-st.header('Hello 🌎!')
+st.header('Hello 🌎!!')
 
 """
 Use dataframe to create a table in two different ways
