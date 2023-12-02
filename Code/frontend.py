@@ -10,7 +10,7 @@ st.sidebar.markdown("# Main page 🎈")
 st.header('Hello 🌎!')
 
 """
-Use dataframe to create a table in two different ways:
+Use dataframe to create a table in two different ways
 """
 
 st.write("Without st.writ")
