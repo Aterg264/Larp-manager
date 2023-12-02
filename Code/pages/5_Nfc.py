@@ -5,6 +5,7 @@ from nfc.clf import RemoteTarget
 import ndef
 import streamlit as st
 
+clf = nfc.ContactlessFrontend()
 target = clf.sense(RemoteTarget('106A'))
 st.write(target)
 
