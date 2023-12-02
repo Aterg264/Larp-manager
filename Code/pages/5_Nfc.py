@@ -5,7 +5,7 @@ from nfc.clf import RemoteTarget
 import ndef
 import streamlit as st
 
-target = nfc.clf.sense(RemoteTarget('106A'))
+target = clf.sense(RemoteTarget('106A'))
 st.write(target)
 
 # if ndef is not None:
