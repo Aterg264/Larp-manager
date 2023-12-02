@@ -13,7 +13,7 @@ st.header('Hello 🌎!')
 Use dataframe to create a table in two different ways
 """
 
-st.write("Without st.writ")
+st.write("Without st.write:")
 df = pd.DataFrame({
   'first column': [number(), 2, 3, 4],
   'second column': [10, 20, 30, 40]
