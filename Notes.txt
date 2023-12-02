@@ -29,3 +29,10 @@ Example for kids
 ----------------
 https://docs.streamlit.io/library/get-started/multipage-apps/create-a-multipage-app
 
+NFC
+---
+NFC
+https://nfcpy.readthedocs.io/en/latest/
+https://github.com/nfcpy/nfcpy 
+
+NDEF
