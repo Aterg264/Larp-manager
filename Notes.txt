@@ -3,7 +3,7 @@ Comands to execute streamlid
 ----------------------------
 run the code from github link: streamlit run link
 .venv\Scripts\activate
-python -m streamlit run Tasks_Chains\Code\frontend.py
+python -m streamlit run Code\frontend.py
 
 Installing Packages
 -------------------

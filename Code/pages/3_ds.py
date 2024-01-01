@@ -1,21 +1,21 @@
 import streamlit as st
+import os
+from google.cloud import firestore
 
 st.markdown("# Ds page 🎉")
 st.sidebar.markdown("# Ds page 🎉")
 
-"""
+
 # PLAYING WITH FIREBASE
 
 # Observe Data
 
 # Authenticate to Firestore with the JSON account key.
-# st.write(os.chdir("C:/Users/Greta/Desktop/rol/Chains/Techie/Tasks_Chains"))
-db = firestore.Client.from_service_account_json("keys/firestore-key-app-tasks.json")
-
-
+st.write(os.chdir("C:/Users/Hydroblin/Desktop/Code/Streamlit/Streamlit_Test"))
+db = firestore.Client.from_service_account_json("C:/Users/Hydroblin/Desktop/Code/Streamlit/clave_streamlit_test/firestore-key-app-tasks.json")
 
 # Create a reference to the Google post.
-doc_ref = db.collection("character_type").document("Broker")
+doc_ref = db.collection("roles").document("all")
 
 # Then get the data at that reference.
 doc = doc_ref.get()
@@ -24,7 +24,7 @@ doc = doc_ref.get()
 st.write("The id is: ", doc.id)
 st.write("The contents are: ", doc.to_dict())
 
-
+"""
 # Create New Data
 
 # Create a new post reference for Organizacion
