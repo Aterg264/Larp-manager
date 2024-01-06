@@ -2,6 +2,7 @@ import streamlit as st
 import os
 from google.cloud import firestore
 
+
 st.markdown("# Ds page 🎉")
 st.sidebar.markdown("# Ds page 🎉")
 

@@ -2,8 +2,6 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 import time
-# from google.cloud import firestore
-
 from backend import *
 
 st.sidebar.markdown("# Main page 🎈")
