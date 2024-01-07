@@ -20,8 +20,22 @@ def login():
 
     def check():
         try:
-            login = auth.sign_in_with_email_and_password(email,password)
+            user = auth.sign_in_with_email_and_password(email,password)
             st.write("Login realizado")
+
+            st.session_state.username = user.get("localId")
+            st.session_state.usermail = user.get("email")
+
+            st.session_state.signedout = True
+            st.session_state.signout = True
+            # st.session_state.username = ''
+            # st.session_state.useremail = ''
+
+            # Information about account
+            # st.write(auth.get_account_info(user['idToken']))
+            # Information about localId and email account
+            # st.write(user.get("localId"))
+            # st.write(user.get("email"))
         except:
             st.warning("Datos incorrectos")
 
@@ -30,4 +44,28 @@ def login():
 
     st.button("Login", on_click=check)
 
-login()
+
+def signout():
+    st.session_state.signedout = False
+    st.session_state.signout = False
+    st.session_state.username = ''
+    st.session_state.useremail = ''
+
+
+if 'signedout' not in st.session_state:
+    st.session_state.signedout = False
+if 'signout' not in st.session_state:
+    st.session_state.signout = False
+
+if not st.session_state['signedout']:
+    login()
+if st.session_state['signout']:
+    st.text('Nombre: ' + st.session_state.username)
+    st.text('Correo: ' + st.session_state.useremail)
+    st.button('Sign out', on_click=signout())
+
+if 'username' not in st.session_state:
+    st.session_state.username = ''
+if 'useremail' not in st.session_state:
+    st.session_state.useremail = ''
+
