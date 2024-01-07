@@ -1,39 +1,33 @@
+import pyrebase
 import streamlit as st
-import firebase_admin
 
-from google.cloud import firestore
-from firebase_admin import credentials
-from firebase_admin import auth
+firebaseConfig={
+  'apiKey': "AIzaSyBN7u_CoR0NAEpVlkrvGqPOhj1oQK1xJlk",
+  'authDomain': "tasks-594c6.firebaseapp.com",
+  'databaseURL': "http://tasks-594c6.firebaseapp.com",
+  'projectId': "tasks-594c6",
+  'storageBucket': "tasks-594c6.appspot.com",
+  'messagingSenderId': "356007745177",
+  'appId': "1:356007745177:web:b59e18bffa3647ee2c8a08",
+  'measurementId': "G-QE8N8LH6KT"
+}
 
+firebase = pyrebase.initialize_app(firebaseConfig)
+auth = firebase.auth()
 
-cred = credentials.Certificate("./firestore-key-app-tasks.json")
-# firebase_admin.initialize_app(cred)
-
-def account():
+def login():
+    st.title("Lunbapp")
 
     def check():
         try:
-            login = auth.get_user_by_email(email)
-            st.write(login.uid)
+            login = auth.sign_in_with_email_and_password(email,password)
             st.write("Login realizado")
         except:
             st.warning("Datos incorrectos")
-
-    st.title("Lunbapp")
 
     email = st.text_input("Usuario")
     password = st.text_input("Contraseña", type="password")
 
     st.button("Login", on_click=check)
 
-
-account()   
-page = auth.list_users()
-while page:
-    for user in page.users:
-        st.write('User: ' + user.uid)
-    # Get next batch of users.
-    page = page.get_next_page()
-
-user = auth.get_user("874joVGUMtXVrvNKBfex3ZPQTWz1")
-st.write("user email: ", user.email)
+login()
