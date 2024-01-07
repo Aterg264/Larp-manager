@@ -16,17 +16,22 @@ https://blog.streamlit.io/streamlit-firestore/
 Login
 ------
 https://blog.streamlit.io/streamlit-authenticator-part-1-adding-an-authentication-component-to-your-app/
-Install authentification: pip install streamlit-authenticator  
+pip install pyrebase4
+https://github.com/thisbejim/Pyrebase
 
 Keys with google cloud
 -------------------------
 https://console.cloud.google.com/apis/dashboard?hl=es&project=tasks-b6d48 
 
+TOML KEY - Using secrets with code
+----------------------------------
+https://blog.streamlit.io/streamlit-firestore-continued/ 
+
 Galery examples
 ---------------
 https://streamlit.io/components?category=images-video 
 
-Example for kids
+Multipage
 ----------------
 https://docs.streamlit.io/library/get-started/multipage-apps/create-a-multipage-app
 
@@ -35,5 +40,3 @@ NFC
 NFC
 https://nfcpy.readthedocs.io/en/latest/
 https://github.com/nfcpy/nfcpy 
-
-NDEF
