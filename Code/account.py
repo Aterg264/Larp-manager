@@ -1,5 +1,6 @@
 import pyrebase
 import streamlit as st
+# from views import home, login, userinfo
 
 firebaseConfig={
   'apiKey': "AIzaSyBN7u_CoR0NAEpVlkrvGqPOhj1oQK1xJlk",
