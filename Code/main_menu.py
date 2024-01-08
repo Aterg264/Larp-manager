@@ -32,7 +32,13 @@ if st.session_state['signout']:
             )
 
     if selected == "Perfil":
+        # st.session_state.signedout = True
+        # st.session_state.signout = True
+
         profile.createPage()
 
     if selected == "Tareas":
+        # st.session_state.signedout = True
+        # st.session_state.signout = True
+
         frontend.createPage()
