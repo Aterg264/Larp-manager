@@ -2,7 +2,6 @@ import streamlit as st
 import account
 import frontend
 import profile
-from streamlit_option_menu import option_menu
 
 auth = account.firebase_configuration()
 
@@ -30,6 +29,7 @@ else:
     
     if st.button('Sign out'):
         account.signout()
+
 
     elif selected == "Perfil":
         # st.session_state.login = True

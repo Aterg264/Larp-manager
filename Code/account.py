@@ -23,7 +23,6 @@ def login(auth):
     def check():
         try:
             user = auth.sign_in_with_email_and_password(email,password)
-            # st.write("Login realizado")
 
             st.session_state.username = user.get("localId")
             st.session_state.usermail = user.get("email")
