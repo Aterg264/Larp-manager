@@ -7,3 +7,4 @@ streamlit_webrtc==0.47.1
 nfcpy
 flask==1.0.2
 pyrebase4
+streamlit_option_menu
