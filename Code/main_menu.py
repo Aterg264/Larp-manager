@@ -17,19 +17,16 @@ if 'useremail' not in st.session_state:
     st.session_state.useremail = ''
 
 # menu_list = ["Perfil", "QR", "Tareas", "Histórico de tareas", "Zonas"]
-menu_list = ["Perfil", "Tareas"]
+menu_list = ("Perfil", "Tareas")
 
 if st.session_state['page']=="initial":
     account.login(auth)
-    st.topbar.markdown("# Login")
 else:
 
-    with st.topbar:
-
-        selected = option_menu(
-            menu_title=None,
-            options=menu_list
-            )
+    selected = st.selectbox(
+        "Selecciona",
+        menu_list
+        )
     
     if st.button('Sign out'):
         account.signout()
