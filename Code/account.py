@@ -28,8 +28,8 @@ def login(auth):
             st.session_state.username = user.get("localId")
             st.session_state.usermail = user.get("email")
 
-            st.session_state.signedout = True
-            st.session_state.signout = True
+            st.session_state.login = True
+            st.session_state.page = "main"
 
         except:
             st.warning("Datos incorrectos")
@@ -41,7 +41,7 @@ def login(auth):
 
 
 def signout():
-    st.session_state.signedout = False
-    st.session_state.signout = False
+    st.session_state.login = False
+    st.session_state.page = "initial"
     st.session_state.username = ''
     st.session_state.useremail = ''
