@@ -16,29 +16,36 @@ if 'username' not in st.session_state:
 if 'useremail' not in st.session_state:
     st.session_state.useremail = ''
 
-if not st.session_state['login']:
-    account.login(auth)
-    st.sidebar.markdown("# Login")
-
 # menu_list = ["Perfil", "QR", "Tareas", "Histórico de tareas", "Zonas"]
 menu_list = ["Perfil", "Tareas"]
 
-if st.session_state['page']!="initial":
-    with st.sidebar:
+if st.session_state['page']=="initial":
+    account.login(auth)
+    st.topbar.markdown("# Login")
+else:
+
+    with st.topbar:
 
         selected = option_menu(
             menu_title=None,
             options=menu_list
             )
+    
+    if st.button('Sign out'):
+        account.signout()
 
-    if selected == "Perfil":
+    elif selected == "Perfil":
         # st.session_state.login = True
         st.session_state.page = "profile"
+        st.write(st.session_state.login)
+        st.write(st.session_state.page)
 
         profile.createPage()
 
-    if selected == "Tareas":
+    elif selected == "Tareas":
         # st.session_state.login = True
         st.session_state.page = "tasks"
 
         frontend.createPage()
+
+    
